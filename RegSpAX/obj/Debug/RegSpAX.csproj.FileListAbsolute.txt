@@ -1,0 +1,7 @@
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\bin\Debug\RegSpAX.exe.config
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\bin\Debug\RegSpAX.exe
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\bin\Debug\RegSpAX.pdb
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\obj\Debug\RegSpAX.csproj.AssemblyReference.cache
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\obj\Debug\RegSpAX.csproj.CoreCompileInputs.cache
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\obj\Debug\RegSpAX.exe
+C:\Users\izxh\source\repos\RegSpAX\RegSpAX\obj\Debug\RegSpAX.pdb
