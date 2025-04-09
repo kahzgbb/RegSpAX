@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.IO;
@@ -84,16 +84,27 @@ namespace RegSpAX
             {
                 char c = (char)(data[i] | (data[i + 1] << 8));
 
-                if (char.IsLetterOrDigit(c) || c == ':' || c == '\\' || c == '/' || c == '.' || c == '-')
+                if ((c >= 'A' && c <= 'Z') ||
+                    (c >= 'a' && c <= 'z') ||
+                    (c >= '0' && c <= '9') ||
+                    c == ':' || c == '\\' || c == '/' || c == '.' || c == '-' || c == '_' || c == ' ' || c == '[' || c == ']')
                 {
                     temp.Append(c);
                 }
                 else
                 {
-                    if (temp.Length > 3 && temp.ToString().Contains(":\\"))
+                    string path = temp.ToString();
+
+                    int index = path.IndexOf(@":\");
+                    if (index > 0 && index - 1 >= 0 && char.IsLetter(path[index - 1]))
                     {
-                        result.AppendLine(temp.ToString());
+                        string cleanedPath = path.Substring(index - 1);
+                        if (cleanedPath.Length > 3)
+                        {
+                            result.AppendLine(cleanedPath);
+                        }
                     }
+
                     temp.Clear();
                 }
             }
